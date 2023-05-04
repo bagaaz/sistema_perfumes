@@ -64,7 +64,7 @@ class PerfumesController extends Controller
                 $query->where('nome', 'like', '%'.$request->input('familiaOlfativa').'%');
             });
         }
-
+        //P
         $perfumes = $perfumes->get();
 
         return response()->json([

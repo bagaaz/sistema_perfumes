@@ -1,0 +1,14 @@
+opcaoperfume.com.br
+
+Separar perfumes por:
+
+Tipos (cologne, toillet...)
+Notas (Hortela, toranja...)
+Classificações (Fresco, Amadeirado...)
+Ocasioes (Trabalho, Encontro, Fauldade, balada...)
+Quantidade de Borrifadas
+Marcas
+Sexo
+Avaliações
+Comentarios
+Preço

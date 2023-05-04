@@ -22,7 +22,7 @@ class PerfumesController extends Controller
     {
         $perfumes = Perfume::where('nome', 'like', '%'.$nome.'%');
 
-        //Aplicação de filtros caso o tenham
+        //Aplicação de filtros caso o tenham sido enviados
         if ($request->has('grife')) {
             $perfumes = $perfumes->with('grife')->whereHas('grife', function ($query) use ($request) {
                 $query->where('nome', 'like', '%'.$request->input('grife').'%');
@@ -64,7 +64,6 @@ class PerfumesController extends Controller
                 $query->where('nome', 'like', '%'.$request->input('familiaOlfativa').'%');
             });
         }
-
         $perfumes = $perfumes->get();
 
         return response()->json([

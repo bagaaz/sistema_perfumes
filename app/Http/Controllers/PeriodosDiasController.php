@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
 class PeriodosDiasController extends Controller
 {
     public function index()
@@ -12,5 +14,25 @@ class PeriodosDiasController extends Controller
             'success' => true,
             'data' => $periodosDias
         ]);
+    }
+
+    public function show(int $id)
+    {
+        //
+    }
+
+    public function store(Request $request)
+    {
+        //
+    }
+
+    public function update(Request $request, int $id)
+    {
+        //
+    }
+
+    public function destroy(int $id)
+    {
+        //
     }
 }

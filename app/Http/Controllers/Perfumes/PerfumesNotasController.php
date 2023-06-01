@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Perfumes;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class PerfumesNotasController extends Controller
 {
@@ -14,5 +15,25 @@ class PerfumesNotasController extends Controller
             'success' => true,
             'data' => $perfumesNotas
         ]);
+    }
+
+    public function show(int $id)
+    {
+        //
+    }
+
+    public function store(Request $request)
+    {
+        //
+    }
+
+    public function update(Request $request, int $id)
+    {
+        //
+    }
+
+    public function destroy(int $id)
+    {
+        //
     }
 }

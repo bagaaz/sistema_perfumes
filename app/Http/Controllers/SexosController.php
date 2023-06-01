@@ -54,7 +54,7 @@ class SexosController extends Controller
         }
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, int $id)
     {
         try {
             $sexo = Sexo::find($id);
@@ -82,7 +82,7 @@ class SexosController extends Controller
         }
     }
 
-    public function destroy($id)
+    public function destroy(int $id)
     {
         try {
             $sexo = Sexo::find($id);

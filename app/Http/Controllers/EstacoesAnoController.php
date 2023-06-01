@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
 class EstacoesAnoController extends Controller
 {
     public function index()
@@ -12,5 +14,25 @@ class EstacoesAnoController extends Controller
             'success' => true,
             'data' => $estacoesAno
         ]);
+    }
+
+    public function show(int $id)
+    {
+        //
+    }
+
+    public function store(Request $request)
+    {
+        //
+    }
+
+    public function update(Request $request, int $id)
+    {
+        //
+    }
+
+    public function destroy(int $id)
+    {
+        //
     }
 }

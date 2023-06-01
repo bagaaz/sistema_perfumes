@@ -1,10 +1,5 @@
 <?php
 
-/** @var \Laravel\Lumen\Routing\Router $router */
-
-use App\Http\Controllers\Perfumes\PerfumesController;
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -16,18 +11,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
-*/
 
-//Rotas Sem Login
-$router->get('/api/perfumes', ['uses' => 'Perfumes/PerfumesController@index']);
-$router->get('/api/search/{nome}', ['uses' => 'Perfumes/PerfumesController@search']);
-$router->get('/api/perfume/{perfume_id}', ['uses' => 'Perfumes/PerfumesController@show']);
-
-//Rotas com Login do Usuario
-
-
-//Rotas com Login do Administrador
+$router->group(['prefix' => 'api'], function() use ($router){
+    $router->get('/', function () use ($router) {
+        return $router->app->version();
+    });
+    $router->get('comentarios', ['uses' => 'ComentariosController@index']);
+});

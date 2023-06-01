@@ -17,8 +17,12 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['prefix' => 'api'], function() use ($router){
-    $router->get('/', function () use ($router) {
-        return $router->app->version();
+
+    $router->group(['prefix' => 'sexo'], function() use ($router) {
+        $router->get('/', ['uses' => 'SexosController@index']);
+        $router->get('/{id}', ['uses' => 'SexosController@show']);
+        $router->post('/', ['uses' => 'SexosController@store']);
+        $router->put('/{id}', ['uses' => 'SexosController@update']);
+        $router->delete('/{id}', ['uses' => 'SexosController@destroy']);
     });
-    $router->get('comentarios', ['uses' => 'ComentariosController@index']);
 });

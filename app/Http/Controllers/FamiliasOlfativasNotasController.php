@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class FamiliasOlfativasNotasControllerTest extends Controller
+class FamiliasOlfativasNotasController extends Controller
 {
     public function index()
     {

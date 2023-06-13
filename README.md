@@ -1,26 +1,46 @@
-# Lumen PHP Framework
+# Sistema de Avaliação de Perfumes (API)
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/lumen)](https://packagist.org/packages/laravel/lumen-framework)
+Sistema de avaliação de perfumes, desenvolvido em Lumen (PHP). A ideia desse sistema é ter um banco de dados de perfumes no qual os usuários poderão avaliar perfumes, indicar quais as melhores ocasiões para usar-los, criar uma lista de favoritos, e muito mais.
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+## Pré-requisitos
 
-> **Note:** In the years since releasing Lumen, PHP has made a variety of wonderful performance improvements. For this reason, along with the availability of [Laravel Octane](https://laravel.com/docs/octane), we no longer recommend that you begin new projects with Lumen. Instead, we recommend always beginning new projects with [Laravel](https://laravel.com).
+- PHP >= 8.1
+- Composer >= 2.0
+- Git
+- MySQL >= 8.0 (ou seu sistema de banco de dados relacional preferido)
 
-## Official Documentation
+## Passo a passo da configuração
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+Siga os passos abaixo para configurar o sistema localmente.
 
-## Contributing
+### 1. Clonar o Repositório
+Clone este repositório em sua máquina local usando o seguinte comando Git:
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+`git clone https://github.com/seu_nome_de_usuario/nome_do_repositorio.git` 
 
-## Security Vulnerabilities
+### 2. Configurar o Arquivo .env
+Copie o arquivo `.env.example` para `.env` na raiz do projeto. Você pode fazer isso com o seguinte comando:
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+`cp .env.example .env` 
 
-## License
+Em seguida, abra o arquivo `.env` e configure as variáveis de ambiente para corresponder às configurações do seu ambiente local, incluindo as configurações do banco de dados.
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 3. Instalar Dependências
+Instale as dependências do projeto com o Composer:
+
+`composer install` 
+
+### 4. Gerar Chave da Aplicação
+Gere uma nova chave para a sua aplicação Lumen com o comando Artisan:
+
+`php artisan key:generate` 
+
+### 5. Executar as Migrações
+Execute as migrações para configurar a base de dados:
+
+`php artisan migrate` 
+
+### 6. Popular a Base de Dados (Seeds)
+Se existirem seeds para o projeto, você pode executá-los com:
+
+`php artisan db:seed`
